@@ -8,4 +8,5 @@ import com.movie.common.entity.User;
  */
 public interface UserService {
     User getUserById(Integer id);
+    Boolean addUser(User user);
 }

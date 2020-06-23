@@ -3,28 +3,31 @@
 
 <mapper namespace="com.movie.user.mapper.UserMapper">
     <resultMap id="baseMap" type="User">
-        <id property="userId" column="userId" />
-        <result property="name" column="name" />
+        <id property="userId" column="userId"/>
+        <result property="name" column="name"/>
         <result property="mail" column="mail"/>
         <result property="phone" column="phone"/>
         <result property="password" column="password"/>
         <result property="status" column="status"/>
     </resultMap>
 
- <select id="selectUserById" resultMap="baseMap">
+    <select id="selectUserById" resultMap="baseMap">
      select * from MOVIE_USER where userId=#{id}
  </select>
-<!--
+    <insert id="insertUser" parameterType="User">
+       INSERT into MOVIE_USER (name, phone ,mail,password )values(#{name},#{phone},#{mail},#{password})
+    </insert>
+    <!--
 
-    <select id="selectArticlesInList" resultType="Article">
-        select title, createTime, image from article where articleId in
+        <select id="selectArticlesInList" resultType="Article">
+            select title, createTime, image from article where articleId in
 
-        <foreach collection="list" item="aid" separator="," open="(" close=")">
-            #{aid}
-        </foreach>
-    </select>
+            <foreach collection="list" item="aid" separator="," open="(" close=")">
+                #{aid}
+            </foreach>
+        </select>
 
--->
+    -->
 </mapper>
 
 

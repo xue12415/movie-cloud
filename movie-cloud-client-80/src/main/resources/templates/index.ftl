@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css"  type="text/css">
 	
 	<!-- jQuery and Modernizr-->
-	<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="jquery-1.10.2/jquery.js"></script>
 	
 	<!-- Core JavaScript Files -->  	 
     <script src="js/bootstrap.min.js"></script>
@@ -118,8 +118,8 @@
 					<div class="dropdown-menu">
 						<div class="dropdown-inner">
 							<ul class="list-unstyled">
-								<li><a href="/index?ifream=login">Login</a></li>
-								<li><a href="register.ftl" target="_blank">Register</a></li>
+								<li><a href="/?ifream=login">Login</a></li>
+								<li><a href="/?ifream=register">Register</a></li>
 							</ul>
 						</div>
 					</div>
@@ -138,7 +138,7 @@
 
 <div>
 
-	<iframe class="myIframe" src="${ifreamSrc}" height="400" width="" name="${ifreamName}" frameborder="0"
+	<iframe class="myIframe" src="${ifream}" height="400" width="" name="${ifream}" frameborder="0"
 			scrolling="auto"
 	></iframe>
 

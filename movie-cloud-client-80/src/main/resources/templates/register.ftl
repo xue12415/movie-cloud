@@ -22,20 +22,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
         <div class="content">
             <div class="register">
-                <form>
+                <form id="userForm" action="/registers" method="get">
                     <div class="register-top-grid">
                         <h3>Personal Information</h3>
                         <div>
-                            <span>First Name<label>*</label></span>
-                            <input type="text">
+                            <span>Name<label>*</label></span>
+                            <input type="text" name="name">
                         </div>
                         <div>
-                            <span>Last Name<label>*</label></span>
-                            <input type="text">
+                            <span>Phone<label>*</label></span>
+                            <input type="text" name="phone">
                         </div>
                         <div>
                             <span>Email Address<label>*</label></span>
-                            <input type="text">
+                            <input type="text" name="mail">
                         </div>
                         <div class="clearfix"></div>
                         <a class="news-letter" href="#">
@@ -47,7 +47,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <h3>Login Information</h3>
                         <div>
                             <span>Password<label>*</label></span>
-                            <input type="text">
+                            <input type="password" name="password" >
                         </div>
                         <div>
                             <span>Confirm Password<label>*</label></span>
@@ -57,7 +57,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                 </form>
                 <div class="clearfix"></div>
-                <div class="register-but">
+                <div class="register-but" onclick="formSubmit()">
                     <form>
                         <input type="submit" value="submit">
                         <div class="clearfix"></div>
@@ -68,4 +68,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
 </div>
 </body>
+<script src="jquery-1.10.2/jquery.js"></script>
+<script type="application/javascript">
+        function formSubmit() {
+            $.ajax({
+                type:"post",
+                url:"/user/add",
+                data:$("#userForm").serialize(),
+                datatype:"json",
+                success:function (data) {
+                   alert(data.flag);
+                   console.log(data.flag);
+                   window.open("localhost");
+                },
+                error:function () {
+                    alert("connect error.");
+                }
+            });
+        }
+
+</script>
 </html>
