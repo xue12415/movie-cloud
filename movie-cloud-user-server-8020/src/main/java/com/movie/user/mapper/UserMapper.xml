@@ -13,10 +13,13 @@
 
     <select id="selectUserById" resultMap="baseMap">
      select * from MOVIE_USER where userId=#{id}
- </select>
+    </select>
     <insert id="insertUser" parameterType="User">
        INSERT into MOVIE_USER (name, phone ,mail,password )values(#{name},#{phone},#{mail},#{password})
     </insert>
+    <select id="selectUserByMail" resultMap="baseMap">
+     select * from MOVIE_USER where mail=#{mail}
+    </select>
     <!--
 
         <select id="selectArticlesInList" resultType="Article">

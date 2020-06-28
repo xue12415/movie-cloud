@@ -23,4 +23,9 @@ public class UserServiceImpl implements UserService {
     public Boolean addUser(User user) {
         return mapper.insertUser(user) > 0 ? true : false;
     }
+
+    @Override
+    public User getUserByMail(String mail) {
+        return mapper.selectUserByMail(mail);
+    }
 }

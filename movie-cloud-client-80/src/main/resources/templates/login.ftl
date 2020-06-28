@@ -32,14 +32,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="col-md-6 login-right">
                     <h3>Registered Customers</h3>
                     <p>If you have an account with us, please log in.</p>
-                    <form>
+                    <form action="/user/login">
                         <div>
                             <span>Email Address<label>*</label></span>
-                            <input type="text">
+                            <input type="text" name="mail">
                         </div>
                         <div>
                             <span>Password<label>*</label></span>
-                            <input type="text">
+                            <input type="password" name="password">
                         </div>
                         <a class="forgot" href="#">Forgot Your Password?</a>
                         <input type="submit" value="Login">

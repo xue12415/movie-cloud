@@ -34,11 +34,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-					<strong>Welcome to Us!</strong>
+					<strong>Welcome to US!</strong>
 				</div>
 				<div class="col-md-6">
 					<ul class="list-inline top-link link">
-						<li><a href="../../Desktop/index.html"><i class="fa fa-home"></i> Home</a></li>
+						<li><a href="index.ftl"><i class="fa fa-home"></i> Home</a></li>
 						<li><a href="contact.ftl"><i class="fa fa-comments"></i> Contact</a></li>
 						<li><a href="#"><i class="fa fa-question-circle"></i> FAQ</a></li>
 					</ul>
@@ -46,8 +46,7 @@
 			</div>
 		</div>
 	</nav>
-
-
+	
 	<!--Navigation-->
     <nav id="menu" class="navbar container">
 		<div class="navbar-header">

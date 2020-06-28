@@ -1,9 +1,7 @@
 package com.movie.client.controller;
 
-import com.movie.common.entity.User;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * @author xue
@@ -12,32 +10,15 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class IndexController {
     @RequestMapping("/")
-    public String index(Model model, String ifream) {
-        if (ifream==null||ifream.equals("")){
-            model.addAttribute("ifream", "hello");
-        }else {
-            model.addAttribute("ifream", ifream);
-        }
+    public String index() {
         return "index";
     }
-
-    @RequestMapping("/hello")
-    public String gotoHello() {
-        return "hello";
-    }
-    @RequestMapping("/login")
+    @RequestMapping("/gotoLogin")
     public String gotoLogin() {
         return "login";
     }
-    @RequestMapping("/register")
+    @RequestMapping("/gotoRegister")
     public String gotoRegister() {
         return "register";
-    }
-    @ResponseBody
-    @RequestMapping("/registers")
-    private String register(User user){
-        System.out.println(user.getName());
-        System.out.println(user.getPassword());
-        return "movie";
     }
 }

@@ -3,7 +3,6 @@ package com.movie.user.controller;
 
 import com.movie.common.entity.User;
 import com.movie.user.service.UserService;
-import com.movie.user.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,5 +23,10 @@ public class UserController {
     @PostMapping("/user/add")
     public Boolean addUser(@RequestBody User user){
         return service.addUser(user);
+    }
+
+    @GetMapping("/user/mail/{mail}")
+    public User getUserByMail(@PathVariable("mail") String mail){
+        return service.getUserByMail(mail);
     }
 }
