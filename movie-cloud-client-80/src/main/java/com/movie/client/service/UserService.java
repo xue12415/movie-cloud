@@ -2,6 +2,8 @@ package com.movie.client.service;
 
 import com.movie.common.entity.User;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * @Author xue
  * @Date 2020/6/28 10:59
@@ -10,5 +12,5 @@ import com.movie.common.entity.User;
  */
 public interface UserService {
     public boolean addUser(User user);
-    boolean login(String email,String password);
+    boolean login(String email, String password, HttpServletRequest request);
 }
