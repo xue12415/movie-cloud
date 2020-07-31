@@ -77,6 +77,7 @@
         <module>movie-cloud-eureka-server-8010</module>
         <module>movie-cloud-user-server-8020</module>
         <module>movie-cloud-client-80</module>
+        <module>movie-cloud-movie-server-8030</module>
     </modules>
 
 </project>
